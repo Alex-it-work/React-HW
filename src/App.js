@@ -1,23 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import React, { Component } from "react";
+import Greeting from "./components/greeting";
+import React from "react";
+import UserListHW from "./components/UsersListHW";
+
+// Создать список пользователей (компоненты UsersListHW, UserListItemHW). (Взаимодействие parent -> child: props).
+// У пользователей есть такая инфа: id, firstName, lastName, age, imgSrc.
+// Застилить карточки пользователей (пример в приложении или по-своему).
+
+// Реализовать (одно или оба):
+// - * выбор пользователя (по клику на него). Выбранных пользователей стилить, например, бордером и фоном;
+// - * удаление пользователя (по клику на кнопке возле пользователя).
+//  (Взаимодействие child -> parent: callback).
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <UserListHW />
     </div>
   );
 }
