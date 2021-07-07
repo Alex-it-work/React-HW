@@ -5,14 +5,14 @@ const dbUsers = [
   {
     id: 1,
     firstName: "John",
-    secondName: "Deer",
+    lastName: "Deer",
     age: 33,
     imgSrc: "http://vertex-art.ru/wp-content/uploads/portretvizo_.jpg",
   },
   {
     id: 2,
     firstName: "Den",
-    secondName: "Polo",
+    lastName: "Polo",
     age: 44,
     imgSrc:
       "https://st.depositphotos.com/1008939/1880/i/950/depositphotos_18807295-stock-photo-portrait-of-handsome-man.jpg",
@@ -20,7 +20,7 @@ const dbUsers = [
   {
     id: 3,
     firstName: "Martin",
-    secondName: "King",
+    lastName: "King",
     age: 55,
     imgSrc:
       "https://upload.wikimedia.org/wikipedia/commons/0/05/Martin_Luther_King%2C_Jr..jpg",
@@ -28,7 +28,7 @@ const dbUsers = [
   {
     id: 4,
     firstName: "John",
-    secondName: "Lennon",
+    lastName: "Lennon",
     age: 22,
     imgSrc:
       "https://cdn.ananasposter.ru/image/cache/catalog/poster/music/85/8817-1000x830.jpg",
@@ -36,7 +36,7 @@ const dbUsers = [
   {
     id: 5,
     firstName: "Angela",
-    secondName: "Merkel",
+    lastName: "Merkel",
     age: 18,
     imgSrc:
       "hhttps://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYni8G4eLkns7X1Ku10jX2jtL3gGDF5drU2A&usqp=CAU",
@@ -44,14 +44,14 @@ const dbUsers = [
   {
     id: 6,
     firstName: "John",
-    secondName: "Deer",
+    lastName: "Deer",
     age: 33,
     imgSrc: "http://vertex-art.ru/wp-content/uploads/portretvizo_.jpg",
   },
   {
     id: 7,
     firstName: "Silvestre",
-    secondName: "Stallone",
+    lastName: "Stallone",
     age: 25,
     imgSrc:
       "https://i.pinimg.com/originals/45/c8/63/45c863ced621cfb5cc6ca6162cd48c9a.jpg",
