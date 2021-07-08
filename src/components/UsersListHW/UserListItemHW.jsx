@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./UserListItem.module.css";
 
 function UserListItemHW(props) {
   const {
@@ -12,7 +13,11 @@ function UserListItemHW(props) {
 
   return (
     <>
-      <li style={isSelected ? liStyle : null} onClick={onClickHandler}>
+      <li
+        className={styles.userItem}
+        style={isSelected ? liStyle : null}
+        onClick={onClickHandler}
+      >
         {" "}
         <img src={imgSrc} alt="" /> ID: "{id}", Fullname: "{firstName}{" "}
         {lastName}" age: {age}
