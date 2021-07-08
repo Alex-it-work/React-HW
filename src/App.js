@@ -1,6 +1,4 @@
 import "./App.css";
-import React, { Component } from "react";
-import Greeting from "./components/greeting";
 import React from "react";
 import UserListHW from "./components/UsersListHW";
 
