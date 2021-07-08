@@ -9,7 +9,7 @@ function UserListItemHW(props) {
     addLikeHandler,
   } = props;
 
-  const liStyle = { backgroundColor: "#CCCCCC" };
+  const liStyle = { border: "5px solid green" };
 
   return (
     <>
