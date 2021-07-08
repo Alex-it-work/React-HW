@@ -39,7 +39,7 @@ const dbUsers = [
     lastName: "Merkel",
     age: 18,
     imgSrc:
-      "hhttps://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYni8G4eLkns7X1Ku10jX2jtL3gGDF5drU2A&usqp=CAU",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYni8G4eLkns7X1Ku10jX2jtL3gGDF5drU2A&usqp=CAU",
   },
   {
     id: 6,
@@ -63,7 +63,7 @@ class UserListHW extends Component {
     super(props);
 
     this.state = {
-      users: dbUsers.map(u => ({ ...u, isSelected: false })),
+      users: dbUsers.map(u => ({ ...u, isSelected: false, like: 0 })),
     };
   }
   mapUser = (user, index) => {
@@ -73,16 +73,28 @@ class UserListHW extends Component {
       newUsers[index].isSelected = !newUsers[index].isSelected;
       this.setState({ users: newUsers });
     };
+    const onDeleteHandler = () => {
+      const newUsers = [...users];
+      newUsers.splice(index, 1);
+      this.setState({ users: newUsers });
+    };
+    const addLikeHandler = () => {
+      const newUsers = [...users];
+      newUsers[index].like = newUsers[index].like + 1;
+      this.setState({ users: newUsers });
+    };
     return (
       <UserListItemHW
         key={user.id}
         user={user}
         onClickHandler={onClickHandler}
+        onDeleteHandler={onDeleteHandler}
+        addLikeHandler={addLikeHandler}
       />
     );
   };
   render() {
-    const users = this.state;
+    const { users } = this.state;
     return <ul>{users.map(this.mapUser)}</ul>;
   }
 }
