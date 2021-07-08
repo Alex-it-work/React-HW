@@ -23,7 +23,7 @@ function UserListItemHW(props) {
         {lastName}" age: {age}
       </li>
       <button onClick={addLikeHandler}>Like {like}</button>
-      <button onClick={onDeleteHandler}>Del</button>
+      <button onClick={onDeleteHandler}>Delete {firstName}</button>
     </>
   );
 }
