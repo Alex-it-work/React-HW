@@ -22,8 +22,12 @@ function UserListItemHW(props) {
         <img src={imgSrc} alt="" /> ID: "{id}", Fullname: "{firstName}{" "}
         {lastName}" age: {age}
       </li>
-      <button onClick={addLikeHandler}>Like {like}</button>
-      <button onClick={onDeleteHandler}>Delete {firstName}</button>
+      <button className={styles.buttons} onClick={addLikeHandler}>
+        Like {like}
+      </button>
+      <button className={styles.buttons} onClick={onDeleteHandler}>
+        Delete {firstName}
+      </button>
     </>
   );
 }

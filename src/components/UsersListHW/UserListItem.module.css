@@ -17,7 +17,7 @@
   transition: opacity 150ms linear;
 }
 
-button {
+.buttons {
   position: relative;
   background-color: #4caf50;
   border: none;
@@ -33,7 +33,7 @@ button {
   cursor: pointer;
 }
 
-button:after {
+.buttons:after {
   content: "";
   background: #f1f1f1;
   display: block;
@@ -46,7 +46,7 @@ button:after {
   transition: all 0.8s;
 }
 
-button:active:after {
+.buttons:active:after {
   padding: 0;
   margin: 0;
   opacity: 1;
