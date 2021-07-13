@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import classNames from "classnames";
-import styles from "./SingUpForm.module.scss";
+import styles from "./SingUpForm.module.css";
 
 class SingUpForm extends Component {
   constructor(props) {
@@ -10,7 +10,7 @@ class SingUpForm extends Component {
       nameValue: "",
       emailValue: "",
       passValue: "",
-      isNamevalid: false,
+      isNameValid: false,
     };
   }
 
@@ -19,6 +19,10 @@ class SingUpForm extends Component {
       nameValue: value,
       isNameValid: /[A-Z][a-z]{0,19}(-[A-Z][a-z]{0,19})?/.test(value),
     });
+  };
+
+  handleEmailChange = ({ target: { value } }) => {
+    this.setState({ emailValue: value });
   };
 
   handlePasswordChange = ({ target: { value } }) => {
@@ -30,7 +34,7 @@ class SingUpForm extends Component {
   };
 
   render() {
-    const { nameValue, emailValue, passValue, isNamevalid } = this.state;
+    const { nameValue, emailValue, passValue, isNameValid } = this.state;
     const nameClassName = classNames(styles.input, {
       [isNameValid ? styles.valid : styles.invalid]: nameValue,
     });
