@@ -1,12 +1,13 @@
 import "./App.css";
 import React from "react";
 // import UserListHW from "./components/UsersListHW";
-import SingUpForm from "./components/SignUpForm";
+// import SingUpForm from "./components/SignUpForm";
+import Calendar from "./components/Calendar";
 
 function App() {
   return (
     <div>
-      <SingUpForm />
+      <Calendar />
     </div>
   );
 }
