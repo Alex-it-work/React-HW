@@ -1,20 +1,28 @@
 import React from "react";
 import Week from "./../Week";
-import { format } from "date-fns";
+import { format, getWeeksInMonth, getWeek } from "date-fns";
 
 const getWeeks = date => {
-  const month = date.getMonth();
-  const week = [];
+  const firstDayOfMonth = new Date(date.getFullYear(), date.getMonth(), 1);
+  const firstWeek = getWeek(firstDayOfMonth);
 
-  return week.map(w => <Week week={w} year={date.getFullYear()} />);
+  const year = date.getFullYear();
+
+  const weeks = [];
+  for (let i = firstWeek; i < firstWeek + getWeeksInMonth(date); i++) {
+    weeks.push(<Week key={i} date={date} week={i} year={year} />);
+  }
+
+  return weeks;
 };
 
 function Month(props) {
   const { date } = props;
+
   return (
     <section>
       <table>
-        <caption>{format(date, "MMM yyyy")}</caption>
+        <caption>{format(date, "MMMM y")}</caption>
         <thead>
           <tr>
             <th>S</th>

@@ -5,13 +5,8 @@ import React from "react";
 import Calendar from "./components/Calendar";
 
 function App() {
-  return (
-    <div>
-      <Calendar />
-    </div>
-  );
+  return <Calendar />;
 }
-
 export default App;
 
 // 1)
@@ -31,3 +26,13 @@ export default App;
 // Отменить стандартное поведение для нажатия SignUp.
 
 // Используемые технологии: https://www.npmjs.com/package/classnames.
+
+// 3)
+// Застилить календарь (https://github.com/pecourses/pe20211-react-app/tree/main/src/components/Calendar) по макету. Макет в приложении. Желательно использовать SASS (scss).
+// Примечания: не выводить дни другого месяца, подсвечивать текущую дату (можно использовать isSameDay, isSameMonth).
+// При необходимости отрефакторить код.
+
+// Используемые технологии:
+// https://www.npmjs.com/package/date-fns
+
+// https://www.npmjs.com/package/prop-types
