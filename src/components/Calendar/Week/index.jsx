@@ -13,9 +13,8 @@ const getDaysOfWeek = (date, week, year) => {
   for (let i = 0; i < 7; ++i) {
     const dateIndex = addDays(startOfWeek, i);
     const newClass = classNames(styles.currentMonth, {
-      [styles.currentDay]: isSameDay(date, dateIndex),
+      [styles.currentDay]: isSameDay(new Date(), dateIndex),
     });
-    console.dir(date);
     isSameMonth(date, dateIndex)
       ? days.push(
           <CalendarDate
