@@ -1,6 +1,7 @@
 import React from "react";
-import Week from "./../Week";
 import { format, getWeeksInMonth, getWeek } from "date-fns";
+import Week from "./../Week";
+import styles from "./../Calendar.module.scss";
 
 const getWeeks = date => {
   const firstDayOfMonth = new Date(date.getFullYear(), date.getMonth(), 1);
@@ -20,10 +21,12 @@ function Month(props) {
   const { date } = props;
 
   return (
-    <section>
-      <table>
-        <caption>{format(date, "MMMM y")}</caption>
-        <thead>
+    <section className={styles.monthContainer}>
+      <table className={styles.dateGrid}>
+        <caption className={styles.currentMonthYear}>
+          {format(date, "MMMM y")}
+        </caption>
+        <thead className={styles.weekDays}>
           <tr>
             <th>S</th>
             <th>M</th>

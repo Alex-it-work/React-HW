@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Day from "./Day";
 import Month from "./Month";
-import styles from "./Calendar.module.sass";
+import styles from "./Calendar.module.scss";
 
 class Calendar extends Component {
   constructor(props) {

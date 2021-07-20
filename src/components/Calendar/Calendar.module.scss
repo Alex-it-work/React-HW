@@ -1,0 +1,75 @@
+* {
+  box-sizing: border-box;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.calendarContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 600px;
+  min-width: 280px;
+  border: 5px solid #01aa80;
+  margin: 10px;
+}
+
+.dayContainer {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  background-color: #22d6c7;
+  text-align: center;
+  flex-basis: 190px;
+  flex-grow: 1;
+}
+
+.currentDayOfWeek {
+  margin-top: 20px;
+  font-size: 25px;
+  color: white;
+  text-transform: uppercase;
+}
+
+.currentDayNumber {
+  font-size: 150px;
+  color: white;
+}
+
+.monthContainer {
+  display: flex;
+  justify-content: center;
+  width: 50%;
+  align-items: center;
+  flex-basis: 190px;
+  flex-grow: 1;
+}
+
+.dateGrid {
+  border-spacing: 5px;
+  text-align: center;
+  font-size: 25px;
+  color: grey;
+}
+
+.currentMonthYear {
+  margin-top: 20px;
+  text-transform: uppercase;
+}
+
+.otherMonth {
+  opacity: 0;
+}
+
+.currentDay {
+  border: 2px solid red;
+  border-radius: 50%;
+}
+
+.weekDays {
+  color: rgb(236, 37, 37);
+  font-size: 15px;
+}
+
+.currentMonth {
+  font-size: 15px;
+}

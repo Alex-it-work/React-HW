@@ -1,6 +1,6 @@
 import React from "react";
 import { format } from "date-fns";
-import styles from "./../Calendar.module.sass";
+import styles from "./../Calendar.module.scss";
 
 function Day() {
   const currentDate = new Date();
