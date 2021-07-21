@@ -1,5 +1,7 @@
 import React from "react";
 import { format, getWeeksInMonth, getWeek } from "date-fns";
+import PropTypes from "prop-types";
+
 import Week from "./../Week";
 import styles from "./../Calendar.module.scss";
 
@@ -42,5 +44,9 @@ function Month(props) {
     </section>
   );
 }
+
+Month.protoTypes = {
+  date: PropTypes.object.isRequired,
+};
 
 export default Month;
