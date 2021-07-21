@@ -1,6 +1,9 @@
+@import "./commonStyles/vars";
+@import "./commonStyles/templates";
+
 * {
   box-sizing: border-box;
-  font-family: "Times New Roman", Times, serif;
+  font-family: "Times New Roman", serif;
 }
 
 .calendarContainer {
@@ -9,67 +12,57 @@
   flex-wrap: wrap;
   max-width: 600px;
   min-width: 280px;
-  border: 5px solid #01aa80;
+  border: 5px solid $main-border-color;
   margin: 10px;
 }
 
 .dayContainer {
-  display: flex;
-  flex-direction: column;
-  width: 50%;
-  background-color: #22d6c7;
-  text-align: center;
-  flex-basis: 190px;
-  flex-grow: 1;
-}
+  @extend %flex-container;
+  background-color: $day-background-color;
 
-.currentDayOfWeek {
-  margin-top: 20px;
-  font-size: 25px;
-  color: white;
-  text-transform: uppercase;
-}
+  .currentDayOfWeek {
+    margin-top: $margin-top;
+    font-size: $day-font-size;
+    color: $day-text-color;
+    text-transform: uppercase;
+  }
 
-.currentDayNumber {
-  font-size: 150px;
-  color: white;
+  .currentDayNumber {
+    font-size: $day-number-font-size;
+    color: $day-text-color;
+  }
 }
 
 .monthContainer {
-  display: flex;
-  justify-content: center;
-  width: 50%;
+  @extend %flex-container;
   align-items: center;
-  flex-basis: 190px;
-  flex-grow: 1;
-}
 
-.dateGrid {
-  border-spacing: 5px;
-  text-align: center;
-  font-size: 25px;
-  color: grey;
-}
+  .dateGrid {
+    border-spacing: 5px;
+    text-align: center;
+    color: $grid-text-color;
+  }
 
-.currentMonthYear {
-  margin-top: 20px;
-  text-transform: uppercase;
-}
+  .currentMonthYear {
+    margin-top: $margin-top;
+    text-transform: uppercase;
+  }
 
-.otherMonth {
-  opacity: 0;
-}
+  .otherMonth {
+    opacity: 0;
+  }
 
-.currentDay {
-  border: 2px solid red;
-  border-radius: 50%;
-}
+  .currentDay {
+    border: 2px solid $highlight-color;
+    border-radius: 50%;
+  }
 
-.weekDays {
-  color: rgb(236, 37, 37);
-  font-size: 15px;
-}
+  .weekDays {
+    color: $highlight-color;
+    font-size: $grid-font-size;
+  }
 
-.currentMonth {
-  font-size: 15px;
+  .currentMonth {
+    font-size: $grid-font-size;
+  }
 }
