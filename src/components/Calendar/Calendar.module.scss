@@ -36,6 +36,7 @@
 .monthContainer {
   @extend %flex-container;
   align-items: center;
+  height: 100%;
 
   .dateGrid {
     border-spacing: 5px;
@@ -45,6 +46,7 @@
 
   .currentMonthYear {
     margin-top: $margin-top;
+    font-size: $day-font-size;
     text-transform: uppercase;
   }
 
