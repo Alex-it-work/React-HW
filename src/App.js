@@ -1,11 +1,46 @@
-import "./App.css";
 import React from "react";
-// import UserListHW from "./components/UsersListHW";
-// import SingUpForm from "./components/SignUpForm";
-import Calendar from "./components/Calendar";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import "./App.css";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import Home from "./pages/Home/Home";
+import Components from "./pages/Components/Components";
+import About from "./pages/About/About";
 
 function App() {
-  return <Calendar />;
+  return (
+    <>
+      <Header />
+      <Router>
+        <ul>
+          <li>
+            {" "}
+            <Link to={"/"}>Home</Link>
+          </li>
+          <li>
+            {" "}
+            <Link to={"/about"}>About</Link>
+          </li>
+          <li>
+            {" "}
+            <Link to={"/components"}>Components</Link>
+          </li>
+        </ul>
+        <Switch>
+          <Route exact path={"/"}>
+            <Home />
+          </Route>
+          <Route exact path={"/about"}>
+            <About />
+          </Route>
+          <Route exact path={"/components"}>
+            <Components />
+          </Route>
+        </Switch>{" "}
+      </Router>
+      <Footer />
+    </>
+  );
 }
 export default App;
 
