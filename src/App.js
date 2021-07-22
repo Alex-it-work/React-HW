@@ -6,6 +6,7 @@ import Footer from "./components/Footer";
 import Home from "./pages/Home/Home";
 import Components from "./pages/Components/Components";
 import About from "./pages/About/About";
+import NotFound from "./components/NotFound";
 
 function App() {
   return (
@@ -14,15 +15,12 @@ function App() {
       <Router>
         <ul>
           <li>
-            {" "}
             <Link to={"/"}>Home</Link>
           </li>
           <li>
-            {" "}
             <Link to={"/about"}>About</Link>
           </li>
           <li>
-            {" "}
             <Link to={"/components"}>Components</Link>
           </li>
         </ul>
@@ -36,7 +34,8 @@ function App() {
           <Route exact path={"/components"}>
             <Components />
           </Route>
-        </Switch>{" "}
+          <Route component={NotFound} />
+        </Switch>
       </Router>
       <Footer />
     </>

@@ -1,40 +1,38 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { Route, Switch, Link, useRouteMatch } from "react-router-dom";
 import UserListHW from "./../../components/UsersListHW";
 import SingUpForm from "./../../components/SignUpForm";
 import Calendar from "./../../components/Calendar";
+import NotFound from "./../../components/NotFound";
 
-const Components = () => (
-  <>
-    {" "}
-    <Router>
+function Components() {
+  const { path, url } = useRouteMatch();
+  return (
+    <>
       <ul>
         <li>
-          {" "}
-          <Link to={"/components/calendar"}>Calendar</Link>
+          <Link to={`${url}/calendar`}>Calendar</Link>
         </li>
         <li>
-          {" "}
-          <Link to={"/components/singUpForm"}>SingUpForm</Link>
+          <Link to={`${url}/singUpForm`}>SingUpForm</Link>
         </li>
         <li>
-          {" "}
-          <Link to={"/components/usersListHW"}>UsersListHW</Link>
+          <Link to={`${url}/usersListHW`}>UsersListHW</Link>
         </li>
       </ul>
       <Switch>
-        <Route exact path={"/components/calendar"}>
+        <Route exact path={`${path}/calendar`}>
           <Calendar />
         </Route>
-        <Route exact path={"/components/singUpForm"}>
+        <Route exact path={`${path}/singUpForm`}>
           <SingUpForm />
         </Route>
-        <Route exact path={"/components/usersListHW"}>
+        <Route exact path={`${path}/usersListHW`}>
           <UserListHW />
         </Route>
-      </Switch>{" "}
-    </Router>
-  </>
-);
-
+        <Route path={`${path}/*`} component={NotFound} />
+      </Switch>
+    </>
+  );
+}
 export default Components;
