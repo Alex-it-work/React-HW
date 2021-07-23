@@ -21,13 +21,13 @@ function Components() {
         </li>
       </ul>
       <Switch>
-        <Route exact path={`${path}/calendar`}>
+        <Route path={`${path}/calendar`}>
           <Calendar />
         </Route>
-        <Route exact path={`${path}/singUpForm`}>
+        <Route path={`${path}/singUpForm`}>
           <SingUpForm />
         </Route>
-        <Route exact path={`${path}/usersListHW`}>
+        <Route path={`${path}/usersListHW`}>
           <UserListHW />
         </Route>
         <Route path={`${path}/*`} component={NotFound} />
