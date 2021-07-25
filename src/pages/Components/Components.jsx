@@ -9,7 +9,7 @@ function Components() {
   const { path, url } = useRouteMatch();
   return (
     <>
-      <ul>
+      <ul style={{ flex: "1 0 auto" }}>
         <li>
           <Link to={`${url}/calendar`}>Calendar</Link>
         </li>
@@ -22,13 +22,25 @@ function Components() {
       </ul>
       <Switch>
         <Route path={`${path}/calendar`}>
-          <Calendar />
+          <div
+            style={{
+              flex: "1 0 auto",
+            }}
+          >
+            <Calendar />
+          </div>
         </Route>
         <Route path={`${path}/singUpForm`}>
-          <SingUpForm />
+          <>
+            <div style={{ flex: "1 0 auto" }}>
+              <SingUpForm />
+            </div>
+          </>
         </Route>
         <Route path={`${path}/usersListHW`}>
-          <UserListHW />
+          <div style={{ flex: "1 0 auto" }}>
+            <UserListHW />
+          </div>
         </Route>
         <Route path={`${path}/*`} component={NotFound} />
       </Switch>
